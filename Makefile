@@ -2,7 +2,7 @@
 all: flow_cutter_pace17 
 
 flow_cutter_pace17: src/*
-	g++ -Wall -std=c++11 -O3 -DNDEBUG src/*.cpp -o flow_cutter_pace17
+	g++ -Wall -std=c++11 -g -DNDEBUG src/*.cpp -o flow_cutter_pace17
 
 .PHONY : clean
 

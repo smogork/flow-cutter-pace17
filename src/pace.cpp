@@ -27,6 +27,7 @@
 #include <unistd.h>
 
 #include <iostream>
+#include <exception>
 using namespace std;
 
 ArrayIDIDFunc tail, head;
@@ -562,11 +563,15 @@ int main(int argc, char*argv[]){
 						compute_multilevel_partition(tail, head, flow_cutter::ComputeSeparator(config), best_bag_size, on_new_multilevel_partition);
 					}
 				}
-			}catch(...){
+			}catch(exception e){
+				int i = 1;
 			}
 			
 		}
-	}catch(...){
+	}catch(std::runtime_error e){
+				int i = 1;
+	}catch(exception e){
+				int i = 1;
 	}
 	signal_handler(0);
 }
